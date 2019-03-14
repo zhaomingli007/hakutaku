@@ -6,13 +6,11 @@ Using spark SQL handling all ETL logics.
 Modeling the business logic as Source,Target,Connector, Job, Reader and Writer.  
 Parameterize the ETL jobs.   
 
-### Project structure
+### Project structure and business logic
 
 ![](document/proj.png)
 
-### Test data
-Configurations are now specified in [Application](src/main/scala/com/hakutaku1/service/Application.scala) class, from where the test data and corresponding SQL files are 
-set.  
+The business logic are handled by spark SQL.  
 The two SQLs are stored at [kakutaku1.sql](src/test/resources/kakutaku1.sql) and [kakutaku2.sql](src/test/resources/kakutaku2.sql)  
 
 - kakutaku1.sql
@@ -30,6 +28,12 @@ select profile_id, pageIsFirstEntry,collect_list(pageUrl) as page_set from base 
 ```sql
 select profile_id || '_' || pageIsFirstEntry as profIsFirst,size(page_set) as size from _SAMPLE_DATA_2
 ```
+
+### Test data
+Configurations are now specified in [Application](src/main/scala/com/hakutaku1/service/Application.scala) class, from where the test data and corresponding SQL files are 
+set.  
+In order to run the code without any change, the sample data must be stored at `/tmp/hakutaku1/sample_data`.
+
 
 ### Run
 `sbt "runMain com.hakutaku1.service.Application"`  
