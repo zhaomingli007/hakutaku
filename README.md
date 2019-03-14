@@ -11,7 +11,7 @@ Parameterize the ETL jobs.
 ![](document/proj.png)
 
 ### Test data
-Configurations are now specified in Application class, from where the test data and corresponding SQL files are 
+Configurations are now specified in [Application](src/main/scala/com/hakutaku1/service/Application.scala) class, from where the test data and corresponding SQL files are 
 set.
 
 ### Run
