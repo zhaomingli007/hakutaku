@@ -1,0 +1,8 @@
+.idea/
+project/project/
+project/target/
+src/test/resources/page_count_result/
+src/test/resources/page_set_result/
+src/test/resources/sample_data/
+src/test/resources/sample_result/
+target/

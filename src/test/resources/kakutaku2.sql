@@ -1,0 +1,1 @@
+select profile_id || '_' || pageIsFirstEntry as profIsFirst,size(page_set) as size from _SAMPLE_DATA_2
